@@ -1,0 +1,8 @@
+# Toit Package File.
+# name: YOUR_PACKAGE_NAME
+# license: |
+#   (Optional): if there is a LICENSE file that is recognized by `toit.pkg describe`.
+#   Otherwise one of https://spdx.org/licenses/
+# description: 'Some descriptions...'
+# Use `toit.pkg install PACKAGE_ID` to install dependencies.
+# dependencies:

@@ -1,0 +1,47 @@
+'scopeName': 'source.toit'
+'fileTypes': ['toit']
+'firstLineMatch': '''
+    # shebang
+    (?xi:
+        ^\#!(?:.*[\/ ])?toit(?:\.?vm)?$
+    )
+'''
+'name': 'Toit'
+'patterns': [
+  {
+    'include': '#comments'
+  }
+  {
+    'begin': '\\b(import)\\s+'
+    'beginCaptures':
+      '0': 'name': 'keyword.control.toit'
+  }
+  {
+    'match': '(constructor)'
+    'name': 'keyword.control.toit'
+  }
+  {
+    'begin': '\"'
+    'beginCaptures':
+      '0': 'name': 'punctuation.definition.string.begin.toit'
+    'end': '\"'
+    'endCaptures':
+      '0': 'name': 'punctuation.definition.string.end.toit'
+    'name': 'string.quoted.double.toit'
+  }
+  'comments':
+    'patterns': [
+      {
+        'begin': '(\/\/).*$\\n?'
+        'beginCaptures':
+          '0': 'name': 'comment.block.toit'
+      }
+      {
+        'begin': '\/\*'
+        'beginCaptures':
+          '0': 'name': 'comment.block.toit'
+        'end': '\*\/'
+        'name': 'comment.block.toit'
+      }
+    ]
+]
